@@ -23,7 +23,19 @@ function App() {
       <SnackbarUtilitiesConfigurator />
       <main className='container'>
         <h1>Personajes de Rick & Morty</h1>
-        <img src={character.image} alt='Personaje aleatorio de Rick & Morty' />
+        <div style={{display: 'flex', flexDirection: 'row', gap: '20px'}}>
+          <img src={character.image} alt='Personaje aleatorio de Rick & Morty' />
+          <div style={{alignContent: 'center', textAlign: 'left'}}>
+            <div>
+              <label>Nombre: </label>
+              <label>{character.name}</label>
+            </div>
+            <div>
+              <label>Status: </label>
+              <label>{character.status}</label>
+            </div>
+          </div>
+        </div>
         <button onClick={fetchCharacter}>Roll</button>
         {/* {JSON.stringify(morty)} */}
       </main>
